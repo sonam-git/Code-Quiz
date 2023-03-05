@@ -1,0 +1,235 @@
+/* variables */
+:root {
+  --primary-color: #1f7b9a;
+  --secondary-color: #06373e;
+  --light-color: rgb(247, 247, 238);
+  --dark-color: black;
+}
+/* universal styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* css for body section */
+body {
+  font-family: Courier, monospace;
+  background-color: rgb(rgb(215, 209, 209));
+  color: rgb(61, 102, 102);
+}
+/* Header styling */
+header div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 5px;
+  align-content: center;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+}
+/* css for the main title h1 :Code Challange Quiz */
+h1.tittle {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
+/* line-height for the instruction given paragraph with class instruction */
+p.instruction {
+  line-height: 1.2em;
+}
+/* styling for section  */
+section div {
+  color: var(--light-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--secondary-color);
+}
+/* css for the div holds the instruction paragraph */
+.main-display {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* css for the div with start quiz button */
+.starts {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* border radius of div with questions and answer choices */
+.questions_list {
+  border-radius: 5px;
+}
+/* css for the divs wrapped score board button, Timer, & heading h1 */
+.menu_style {
+  background-color: var(--light-color);
+  border: var(--dark-color) 2px solid;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--dark-color);
+  margin-top: 20px;
+}
+/* css for the p for textarea input with div  */
+div .your_intials {
+  font-size: 0.5cm;
+  font: 2px;
+  padding-block: 10px;
+}
+/* css for the div class complete which holds the h2 with quiz complete, total score, and input text area for initials with submit button */
+div.complete {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  margin: auto;
+  column-gap: 5px;
+}
+/* div with score list, go back and clear all button */
+div .back_clear {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+/* div to display the question and answer button */
+div .list_inner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+/* Styling for dynamically displayed question */
+/* styling for ul which holds question and answer choices */
+.questions_ul {
+  list-style-type: none;
+  display: contents;
+}
+/* width of li having button of answer choices */
+.questions_li {
+  width: 300px;
+}
+/* styling for button*/
+/* styling for the button start quiz,score board, submit, go back, and clear all */
+.btn_style_main {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border-radius: 10px;
+  width: 225px;
+  border: 1px solid var(--light-color);
+  font-size: 0.5cm;
+  padding: 8px;
+  margin: 4px;
+  outline: none;
+}
+/* hover effect for the same button above */
+.btn_style_main:hover {
+  background-color: white;
+  color: var(--secondary-color);
+  border: solid 2px var(--secondary-color);
+  box-shadow: 0 2px rgb(15, 14, 14);
+  transform: translateY(1px);
+}
+/* styling for the answer choices button */
+.answer_btn {
+  color: white;
+  width: 225px;
+  border: 1px solid black;
+  font-size: 0.5cm;
+  padding: 8px;
+  outline: none;
+  text-align: start;
+  border: 1px solid;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+/* hover effect for the answer choices button */
+.answer_btn:hover {
+  background-color: var(--secondary-color);
+  box-shadow: 0 2px rgb(214, 71, 71);
+  transform: translateY(1px);
+}
+/* div with for dynamically generated contents within the same div */
+.score_div {
+  border-radius: 5px;
+  margin-top: 10px;
+}
+/* styling for the input box for the initials */
+.span_submit {
+  height: 35px;
+  border-radius: 5px;
+}
+/* hide page element before start the quiz*/
+#questions_section,
+#final_score,
+#high_scores,
+#correct_wrong {
+  display: none;
+  margin-top: 10px;
+}
+/* styling for h2 with the class complete_quiz */
+h2.complete_quiz {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+
+
+/* MEDIA QUERIES FOR THE SCREEN SIZE GIVEN BELOW */
+@media screen and (max-width: 720px) {
+  header div {
+    justify-content: space-around;
+    padding: 5px;
+    align-content: center;
+    display: flex;
+  }
+  h1.tittle {
+    font-size: 20px;
+  }
+  .btn_style_main {
+    width: 150px;
+    margin-top: 5px;
+    padding: 2px 0px 2px 0px;
+  }
+  button#view_scores {
+    border: solid var(--dark-color) 2px;
+  }
+  .answer_btn {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+  }
+
+  div .back_clear {
+    max-width: 100%;
+  }
+  .score_div {
+    margin-top: 10px;
+  }
+
+  p.instruction {
+    font-size: 15px;
+    text-align: center;
+    padding: 0px 5px;
+    color: var(--light-color);
+  }
+  .list_inner {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+  h2.complete_quiz {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Code Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- start header section-->
+    <header class="header-title" id="header">
+      <div class="scoreboard_button">
+        <div class="menu_style">
+          <!-- button to show the score list -->
+          <button id="view_scores" class="btn_style_main" type="button">
+            Score Board
+          </button>
+        </div>
+        <div class="menu_style">
+          <!-- heading h1 -->
+          <h1 class="tittle">Coding Quiz Challenge</h1>
+        </div>
+        <div class="menu_style">
+          <!-- timer -->
+          <p class="timer">Time: 60 Sec</p>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!--start main section -->
+    <main>
+      <!-- section for initial calling layout-->
+      <section id="start_screen">
+        <!-- this section contain the instruction paragraph and start button -->
+        <div class="main-display">
+          <p class="instruction">
+            Try to answer the follwing code-related questions with-in the time
+            limit. Keep in mind that incorrect answers will penalize your
+            score-time by 10 seconds.
+          </p>
+        </div>
+        <!-- start button -->
+        <div class="starts">
+          <button id="start" class="start-btn btn_style_main">
+            Start Quiz
+          </button>
+        </div>
+      </section>
+      <!-- once click on the start button/ the section dynamically change into this section for question and answer choices -->
+      <section id="questions_section">
+        <div class="questions_list">
+          <div class="list_inner">
+            <ul class="questions_ul">
+              <h2 class="question_title" id="question">
+                This element hold the question.
+              </h2>
+              <!-- list of answer choices  -->
+              <li class="questions_li">
+                <button id="a1" value="0" type="button" class="answer_btn">
+                  Answer-1
+                </button>
+              </li>
+              <li class="questions_li">
+                <button id="a2" value="1" type="button" class="answer_btn">
+                  Answer-2
+                </button>
+              </li>
+              <li class="questions_li">
+                <button id="a3" value="2" type="button" class="answer_btn">
+                  Answer-3
+                </button>
+              </li>
+              <li class="questions_li">
+                <button id="a4" value="3" type="button" class="answer_btn">
+                  Answer-4
+                </button>
+              </li>
+            </ul>
+            <!-- this div holds the correct or wrong pop up text once you select the answer -->
+            <div id="correct_wrong"></div>
+          </div>
+        </div>
+      </section>
+
+      <!--section to show final score-->
+      <section id="final_score">
+        <div class="score_div">
+          <div class="complete">
+            <!-- quiz complete text will show once all question is been answered -->
+            <h2 class="complete_quiz">Quiz Complete..!</h2>
+            <!-- shows the total score -->
+            <p>Your total score is: <span id="score">0</span></p>
+            <!-- gives a text area to insert your initials -->
+            <p class="your_intials">
+              Your initials:
+              <span
+                ><input
+                  placeholder=" Your initials"
+                  id="initials"
+                  class="span_submit"
+              /></span>
+              <!-- once type initial and click the submit button it locally stores your score and initials -->
+              <button id="submit_score" class="submit-score-btn btn_style_main">
+                Submit
+              </button>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--this section holds the score list-->
+      <section id="high_scores">
+        <div class="score_div">
+          <div class="back_clear">
+            <!-- shows score list from highest to lowest with your initials -->
+            <h2 class="complete_quiz">Score List</h2>
+            <ol class="score_list"></ol>
+            <!-- button to go back to home -->
+            <button id="back_button" class="go-back-btn btn_style_main">
+              Go Back
+            </button>
+            <!-- button to clear the stored score list and initials -->
+            <button id="clear_scores" class="clear-scores-btn btn_style_main">
+              Clear All Scores
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
